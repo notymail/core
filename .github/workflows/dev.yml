@@ -14,6 +14,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: dafnik/setup-node-pnpm@v3
+        with:
+          install-ignore-scripts: true
+
+      - name: Test
+        run: pnpm test
+
   prettier:
     runs-on: ubuntu-latest
     steps:

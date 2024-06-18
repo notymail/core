@@ -16,7 +16,7 @@ describe('Email Sending', () => {
 
     // noinspection HttpUrlsUsage
     mailChecker = `http://${container.getHost()}:${container.getMappedPort(8025)}/api/v1`;
-  }, 10 * 1000);
+  }, 20 * 1000);
 
   afterAll(async () => {
     await container.stop();
