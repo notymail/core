@@ -41,7 +41,7 @@ docker run -d -p <YOUR_PORT>:3124 --restart=always --name notymail \
 
 ## 🐳 Docker Compose
 
-Example docker-compose template: https://github.com/Dafnik/notymail/blob/main/docker/docker-compose.yml
+Example docker-compose template: https://github.com/Dafnik/notymail/blob/main/docker-compose.yml
 
 ```bash
 docker-compose up -d

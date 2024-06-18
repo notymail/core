@@ -58,7 +58,7 @@
       "defaultConfiguration": "local",
       "options": {
         "engine": "docker",
-        "file": "./docker/Dockerfile"
+        "file": "./Dockerfile"
       },
       "configurations": {
         "local": {
