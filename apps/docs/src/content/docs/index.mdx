@@ -1,0 +1,50 @@
+---
+title: Welcome to notymail
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: Send e-mails from any environment
+  image:
+    file: ../../assets/notymail.webp
+  actions:
+    - text: Getting started
+      link: /getting-started/installation/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/Dafnik/notymail
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Setup with Docker" icon="setting">
+    ```bash
+    docker run -d -p 3124:3124 --restart=always --name notymail \
+      -e API_KEYS='' \
+      -e MAIL_SENDER='notymail <test@1.1.1.1>' \
+      -e MAIL_HOST='gmail.com' \
+      -e MAIL_PORT='587' \
+      -e MAIL_SECURE='false' \
+      -e MAIL_AUTH_USER='test@1.1.1.1' \
+      -e MAIL_AUTH_PASSWORD='password' \
+      dafnik/notymail:latest
+    ```
+  </Card>
+  <Card title="Use with curl" icon="pencil">
+    ```bash
+    curl -X 'POST' 'notymail.yourdomain.your_tld/api/email' \
+      -H 'accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "to": "test@1.1.1.1.at",
+        "subject": "Hello world!",
+        "body": "Hello body world! **This is markdown**"
+      }'
+    ```
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in [the notymail Docs](/getting-started/installation/).
+  </Card>
+</CardGrid>

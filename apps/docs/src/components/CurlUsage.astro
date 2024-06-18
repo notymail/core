@@ -1,0 +1,23 @@
+---
+interface Props {
+  url: string;
+  to: string;
+  subject: string;
+  apiKey?: string;
+  content?: string;
+}
+
+const { url, to, subject, apiKey, content} = Astro.props;
+---
+
+<pre>
+  curl -X 'POST' '{url}/api/email' \
+  -H 'accept: application/json' \
+  -H 'x-api-key: {apiKey}' \
+  -H 'Content-Type: application/json' \
+  -d '&#123
+    "to": "{to}",
+    "subject": "{subject}",
+    "body": "{content}"
+}'
+</pre>
