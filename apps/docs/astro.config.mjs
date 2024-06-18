@@ -22,6 +22,7 @@ export default defineConfig({
       social: {
         github: 'https://github.com/Dafnik/notymail',
       },
+      favicon: '/favicon.png',
       sidebar: [
         {
           label: 'Getting Started',
