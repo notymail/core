@@ -2,12 +2,14 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import { fileURLToPath } from 'node:url';
 import starlight from '@astrojs/starlight';
+import solid from '@astrojs/solid-js';
 
 // https://astro.build/config
 export default defineConfig({
   outDir: '../../dist/apps/docs',
   site: 'https://notymail.dafnik.me',
   integrations: [
+    solid({ devtools: true }),
     tailwind({
       configFile: fileURLToPath(
         new URL('./tailwind.config.cjs', import.meta.url),
@@ -35,11 +37,11 @@ export default defineConfig({
         {
           label: 'Usage',
           items: [
+            { label: 'curl', link: '/usage/curl' },
             {
               label: 'Swagger Docs',
               link: 'https://private.notymail.dafnik.me/docs',
             },
-            { label: 'curl', link: '/usage/curl' },
           ],
         },
       ],
