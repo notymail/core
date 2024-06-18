@@ -27,6 +27,20 @@ docker run -d -p 3124:3124 --restart=always --name notymail \
 
 notymail is now running on <http://0.0.0.0:3124>.
 
+Alternatively you can use the GitHub Docker Container Registry.
+
+```bash
+docker run -d -p 3124:3124 --restart=always --name notymail \
+  -e API_KEYS='' \
+  -e MAIL_SENDER='notymail <test@1.1.1.1>' \
+  -e MAIL_HOST='gmail.com' \
+  -e MAIL_PORT='587' \
+  -e MAIL_SECURE='false' \
+  -e MAIL_AUTH_USER='test@1.1.1.1' \
+  -e MAIL_AUTH_PASSWORD='password' \
+  ghcr.io/dafnik/notymail:latest
+```
+
 > [!NOTE]
 > If you want to limit exposure to localhost (without exposing port for other users or to use a [reverse proxy](https://notymail.dafnik.me/getting-started/reverse-proxy)), you can expose the port like this:
 >

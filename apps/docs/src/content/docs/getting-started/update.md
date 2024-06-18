@@ -27,6 +27,8 @@ docker run -d -p 3124:3124 --restart=always --name notymail \
 
 Note: For every new release, it takes some time to build the docker image, please be patient if it is not available yet.
 
+If you want to use the GitHub Docker Container Registry, use `ghcr.io/dafnik/notymail:latest`
+
 ## 🐳 Docker Compose
 
 ```bash

@@ -19,6 +19,22 @@ docker run -d -p 3124:3124 --restart=always --name notymail \
 
 notymail is now running on <http://0.0.0.0:3124>.
 
+### GitHub Docker Container Registry
+
+Alternatively you can use the GitHub Docker Container Registry.
+
+```bash
+docker run -d -p 3124:3124 --restart=always --name notymail \
+  -e API_KEYS='' \
+  -e MAIL_SENDER='notymail <test@1.1.1.1>' \
+  -e MAIL_HOST='gmail.com' \
+  -e MAIL_PORT='587' \
+  -e MAIL_SECURE='false' \
+  -e MAIL_AUTH_USER='test@1.1.1.1' \
+  -e MAIL_AUTH_PASSWORD='password' \
+  ghcr.io/dafnik/notymail:latest
+```
+
 ### Changing port
 
 ```bash
