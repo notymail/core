@@ -1,0 +1,53 @@
+{
+  "baseBranches": ["main"],
+  "enabledManagers": ["npm", "github-actions"],
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "",
+  "semanticCommitType": "build",
+  "commitBody": "See associated pull request for more information.",
+  "schedule": [
+    "after 11:00pm on the 1 day of the month",
+    "before 4am on the 2 day of the month",
+    "after 11:00pm on the 15 day of the month",
+    "before 4am on the 16 day of the month"
+  ],
+  "timezone": "Europe/Vienna",
+  "labels": ["dependencies"],
+  "assignees": ["Dafnik"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeType": "branch",
+    "commitMessageAction": "lock file maintenance",
+    "semanticCommitType": "build"
+  },
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^@nx/", "^@swc/"],
+      "matchPackageNames": ["nx"],
+      "groupName": "nx workspace",
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["^@hono/", "hono"],
+      "groupName": "hono dependencies"
+    },
+    {
+      "matchPackageNames": ["typescript", "tslib"],
+      "groupName": "typescript dependencies"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "excludePackageNames": ["typescript", "tslib", "nx"],
+      "excludePackagePatterns": ["^@hono/", "hono", "^@nx/"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "minor-updates"
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "groupName": "major-update"
+    }
+  ],
+  "extends": ["config:base", ":pinVersions", ":unpublishSafe", ":prNotPending", ":preserveSemverRanges", ":rebaseStalePrs"]
+
+}
