@@ -1,0 +1,5 @@
+{
+  "name": "notymail-action",
+  "version": "0.0.1",
+  "main": "./action.js"
+}

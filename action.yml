@@ -1,0 +1,27 @@
+name: 'notymail'
+author: 'Dafnik'
+description: 'Send emails easily from GitHub workflows.'
+branding:
+  icon: 'arrow-down-circle'
+  color: 'purple'
+
+inputs:
+  url:
+    description: 'URL of notymail server'
+    required: true
+  to:
+    description: 'E-Mail recipient address'
+    required: true
+  subject:
+    description: 'E-Mail subject'
+    required: true
+  body:
+    description: 'E-Mail body in Markdown'
+    required: false
+  apiKey:
+    description: 'API-Key for notymail server'
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'action/action.js'
