@@ -13,22 +13,31 @@ export default function () {
 function Output() {
   const [state] = useInputs();
 
-  const curlCommand = createMemo(
-    () => `curl -X 'POST' '${state().url}/api/email' \\
-  -H 'accept: application/json' \\${
-    state().apiKey ? (
-      `
-  -H 'x-api-key: ${state().apiKey}' \\`
-    ) : (
-      <></>
-    )
-  }
-  -H 'Content-Type: application/json' \\
-  -d '${JSON.stringify({
-    to: state().to,
-    subject: state().subject,
-    body: state().body,
-  })}'`,
+  const fetchCommand = createMemo(
+    () => `await fetch('${state().url}/api/email', {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"${
+      state().apiKey ? (
+        `,
+    "x-api-key": "${state().apiKey}"`
+      ) : (
+        <></>
+      )
+    }
+  },
+  body: JSON.stringify({
+    to: "${state().to}",
+    subject: "${state().subject}"${
+      state().body ? (
+        `,
+    body: "${state().body}",`
+      ) : (
+        <></>
+      )
+    }
+  })
+})`,
   );
 
   return (
@@ -45,7 +54,7 @@ function Output() {
         disabled:opacity-50 bg-white text-black hover:bg-white/90 h-10 px-4 py-2"
           onClick={() =>
             navigator.clipboard.writeText(
-              document.getElementById('curl-command').innerText,
+              document.getElementById('fetch-command').innerText,
             )
           }
         >
@@ -65,7 +74,7 @@ function Output() {
           Copy
         </button>
       </div>
-      <pre id="curl-command">{curlCommand()}</pre>
+      <pre id="fetch-command">{fetchCommand()}</pre>
     </>
   );
 }

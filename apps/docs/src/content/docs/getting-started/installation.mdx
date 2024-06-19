@@ -3,6 +3,9 @@ title: Installation
 description: How-to setup notymail
 ---
 
+
+import { Code } from '@astrojs/starlight/components';
+
 ## 🐳 Docker
 
 ```bash
@@ -17,37 +20,55 @@ docker run -d -p 3124:3124 --restart=always --name notymail \
   dafnik/notymail:latest
 ```
 
-notymail is now running on <http://0.0.0.0:3124>.
+notymail is now running on [http://0.0.0.0:3124](http://0.0.0.0:3124).
 
 ### GitHub Docker Container Registry
 
 Alternatively you can use the GitHub Docker Container Registry.
 
-```bash
-docker run -d -p 3124:3124 --restart=always --name notymail \
-  -e API_KEYS='' \
-  -e MAIL_SENDER='notymail <test@1.1.1.1>' \
-  -e MAIL_HOST='gmail.com' \
-  -e MAIL_PORT='587' \
-  -e MAIL_SECURE='false' \
-  -e MAIL_AUTH_USER='test@1.1.1.1' \
-  -e MAIL_AUTH_PASSWORD='password' \
-  ghcr.io/dafnik/notymail:latest
-```
+<Code code={`
+  docker run -d -p 3124:3124 --restart=always --name notymail \
+
+    -e API_KEYS='' \
+
+    -e MAIL_SENDER='notymail <test@1.1.1.1>' \
+
+    -e MAIL_HOST='gmail.com' \
+
+    -e MAIL_PORT='587' \
+
+    -e MAIL_SECURE='false' \
+
+    -e MAIL_AUTH_USER='test@1.1.1.1' \
+
+    -e MAIL_AUTH_PASSWORD='password' \
+
+    ghcr.io/dafnik/notymail:latest
+
+`} lang="bash" mark={'ghcr.io/dafnik/notymail:latest'} />
 
 ### Changing port
 
-```bash
-docker run -d -p <YOUR_PORT>:3124 --restart=always --name notymail \
-  -e API_KEYS='' \
-  -e MAIL_SENDER='notymail <test@1.1.1.1>' \
-  -e MAIL_HOST='gmail.com' \
-  -e MAIL_PORT='587' \
-  -e MAIL_SECURE='false' \
-  -e MAIL_AUTH_USER='test@1.1.1.1' \
-  -e MAIL_AUTH_PASSWORD='password' \
-  dafnik/notymail:latest
-```
+<Code code={`
+  docker run -d -p <YOUR_PORT>:3124 --restart=always --name notymail \
+
+    -e API_KEYS='' \
+
+    -e MAIL_SENDER='notymail <test@1.1.1.1>' \
+
+    -e MAIL_HOST='gmail.com' \
+
+    -e MAIL_PORT='587' \
+
+    -e MAIL_SECURE='false' \
+
+    -e MAIL_AUTH_USER='test@1.1.1.1' \
+
+    -e MAIL_AUTH_PASSWORD='password' \
+
+    dafnik/notymail:latest
+
+`} lang="bash" mark={'<YOUR_PORT>'} />
 
 ### Docker Tags Description
 
@@ -73,9 +94,7 @@ More information: [Reverse proxy](../reverse-proxy)
 
 This is optional for someone who wants to use systemd autostart feature.
 
-Create a service file at `/etc/systemd/system/notymail.service`
-
-```bash
+<Code code={`
 [Unit]
 Description=notymail
 Wants=syslog.service
@@ -87,7 +106,7 @@ ExecStop=/usr/bin/docker stop -t 2 notymail
 
 [Install]
 WantedBy=multi-user.target
-```
+`} lang="bash" title='/etc/systemd/system/notymail.service' />
 
 Now execute:
 

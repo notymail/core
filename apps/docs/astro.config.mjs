@@ -38,6 +38,7 @@ export default defineConfig({
           label: 'Usage',
           items: [
             { label: 'curl', link: '/usage/curl' },
+            { label: 'fetch', link: '/usage/fetch' },
             {
               label: 'Swagger Docs',
               link: 'https://private.notymail.dafnik.me/docs',
