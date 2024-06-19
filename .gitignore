@@ -44,3 +44,4 @@ Thumbs.db
 .astro
 
 apps/api/.env.local
+action/pnpm-lock.yaml

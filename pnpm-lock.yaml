@@ -28,9 +28,6 @@ importers:
       marked:
         specifier: 13.0.0
         version: 13.0.0
-      marked-plaintify:
-        specifier: 1.0.1
-        version: 1.0.1(marked@13.0.0)
       nodemailer:
         specifier: 6.9.13
         version: 6.9.13
@@ -44,12 +41,6 @@ importers:
         specifier: 3.23.8
         version: 3.23.8
     devDependencies:
-      '@actions/core':
-        specifier: ^1.10.1
-        version: 1.10.1
-      '@actions/github':
-        specifier: ^6.0.0
-        version: 6.0.0
       '@astrojs/check':
         specifier: ^0.5.2
         version: 0.5.10(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.4.5)
@@ -157,9 +148,6 @@ importers:
         version: 5.4.5
 
 packages:
-
-  '@actions/core@1.10.1':
-    resolution: {integrity: sha512-3lBR9EDAY+iYIpTnTIXmWcNbX3T2kCkAEQGIQx4NVQ0575nk2k3GRZDTPQG+vVtS2izSLmINlxXf0uLtnrTP+g==}
 
   '@actions/exec@1.1.1':
     resolution: {integrity: sha512-+sCcHHbVdk93a0XT19ECtO/gIXoxvdsgQLzb2fE2/5sIZmWQuluYyjPQtrtTHdU1YzTZ7bAPN4sITq2xi1679w==}
@@ -3975,11 +3963,6 @@ packages:
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
-  marked-plaintify@1.0.1:
-    resolution: {integrity: sha512-KQhxtuVWf3Ij3YMiW4ArlgNOVmzOAlP0o/upsu2+h7Q4TCAwG4UvkYTteZF2sDDomXQnNSLmfyAhoR0gx2Orgw==}
-    peerDependencies:
-      marked: '>=7.0.0'
-
   marked@13.0.0:
     resolution: {integrity: sha512-VTeDCd9txf4KLLljUZ0nljE/Incb9SrWuueE44QVuU0pkOdh4sfCeW1Z6lPcxyDRSVY6rm8db/0OPaN75RNUmw==}
     engines: {node: '>= 18'}
@@ -5289,10 +5272,6 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
-
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
@@ -5564,11 +5543,6 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
-
-  '@actions/core@1.10.1':
-    dependencies:
-      '@actions/http-client': 2.2.1
-      uuid: 8.3.2
 
   '@actions/exec@1.1.1':
     dependencies:
@@ -10341,10 +10315,6 @@ snapshots:
 
   markdown-table@3.0.3: {}
 
-  marked-plaintify@1.0.1(marked@13.0.0):
-    dependencies:
-      marked: 13.0.0
-
   marked@13.0.0: {}
 
   mdast-util-definitions@6.0.0:
@@ -12149,8 +12119,6 @@ snapshots:
       punycode: 2.3.1
 
   util-deprecate@1.0.2: {}
-
-  uuid@8.3.2: {}
 
   v8-compile-cache-lib@3.0.1: {}
 

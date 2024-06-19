@@ -5,4 +5,5 @@
 /.nx/workspace-data
 pnpm-lock.yaml
 
+/action
 apps/docs/src/content/docs/index.mdx
