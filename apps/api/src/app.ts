@@ -1,8 +1,8 @@
-import { prettyJSON } from 'hono/pretty-json';
-import { trimTrailingSlash } from 'hono/trailing-slash';
 import { OpenAPIHono } from '@hono/zod-openapi';
-import api from './api';
+import { prettyJSON } from 'hono/pretty-json';
 import { timeout } from 'hono/timeout';
+import { trimTrailingSlash } from 'hono/trailing-slash';
+import api from './api';
 import swagger from './swagger';
 
 const app = new OpenAPIHono();

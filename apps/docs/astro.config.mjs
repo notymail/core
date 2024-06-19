@@ -1,8 +1,8 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import { fileURLToPath } from 'node:url';
-import starlight from '@astrojs/starlight';
 import solid from '@astrojs/solid-js';
+import starlight from '@astrojs/starlight';
+import tailwind from '@astrojs/tailwind';
+import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'node:url';
 
 // https://astro.build/config
 export default defineConfig({

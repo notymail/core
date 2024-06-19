@@ -1,5 +1,5 @@
-import app from './app';
 import { GenericContainer, StartedTestContainer, Wait } from 'testcontainers';
+import app from './app';
 
 describe('Email Validation', () => {
   it('should fail on invalid to email"', async () => {

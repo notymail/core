@@ -1,6 +1,6 @@
 import { OpenAPIHono } from '@hono/zod-openapi';
-import infoApi from './info';
 import emailApi from './email';
+import infoApi from './info';
 
 const api = new OpenAPIHono();
 
