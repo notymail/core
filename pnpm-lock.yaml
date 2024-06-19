@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@nxtensions/astro@19.0.0':
+    hash: dbc6f4l7zcudz3q6ic46vyao44
+    path: patches/@nxtensions__astro@19.0.0.patch
+
 importers:
 
   .:
@@ -77,7 +82,7 @@ importers:
         version: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))
       '@nxtensions/astro':
         specifier: 19.0.0
-        version: 19.0.0(@nx/devkit@19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))))(@nx/js@19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@20.14.2)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5))(astro@4.10.3(@types/node@20.14.2)(typescript@5.4.5))(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5)
+        version: 19.0.0(patch_hash=dbc6f4l7zcudz3q6ic46vyao44)(@nx/devkit@19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))))(@nx/js@19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@20.14.2)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5))(astro@4.10.3(@types/node@20.14.2)(typescript@5.4.5))(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5)
       '@swc-node/register':
         specifier: 1.9.2
         version: 1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5)
@@ -7595,7 +7600,7 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nxtensions/astro@19.0.0(@nx/devkit@19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))))(@nx/js@19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@20.14.2)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5))(astro@4.10.3(@types/node@20.14.2)(typescript@5.4.5))(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5)':
+  '@nxtensions/astro@19.0.0(patch_hash=dbc6f4l7zcudz3q6ic46vyao44)(@nx/devkit@19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))))(@nx/js@19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@20.14.2)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5))(astro@4.10.3(@types/node@20.14.2)(typescript@5.4.5))(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))(typescript@5.4.5)':
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@nx/devkit': 19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@swc/types@0.1.8)(typescript@5.4.5))(@swc/core@1.5.7(@swc/helpers@0.5.11)))
