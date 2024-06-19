@@ -28,6 +28,15 @@
   --sl-color-black: #ffffff;
 }
 
-pre {
-  white-space: pre-wrap; /* css-3 */
+.home-links ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.home-links a {
+  text-decoration: none;
+}
+
+.home-links a::after {
+  content: ' → ';
 }

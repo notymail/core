@@ -16,33 +16,28 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, Code } from '@astrojs/starlight/components';
 
 <CardGrid stagger>
   <Card title="Setup with Docker" icon="setting">
-    ```bash
-    docker run -d -p 3124:3124 --restart=always --name notymail \
-      -e API_KEYS='' \
-      -e MAIL_SENDER='notymail <test@1.1.1.1>' \
-      -e MAIL_HOST='gmail.com' \
-      -e MAIL_PORT='587' \
-      -e MAIL_SECURE='false' \
-      -e MAIL_AUTH_USER='test@1.1.1.1' \
-      -e MAIL_AUTH_PASSWORD='password' \
-      dafnik/notymail:latest
-    ```
+    <div class="home-links">
+      - [<strong>Docker Registry</strong>](/getting-started/installation#docker)
+      - [<strong>GitHub Registry</strong>
+      ](/getting-started/installation#github-docker-container-registry) - [
+      <strong>Changing port</strong>
+      ](/getting-started/installation#changing-port) - [
+      <strong>Docker Compose</strong>
+      ](/getting-started/installation#-docker-compose) - [
+      <strong>Reverse proxy</strong>
+      ](/getting-started/installation#optional-reverse-proxy)
+    </div>
   </Card>
-  <Card title="Use with curl" icon="pencil">
-    ```bash
-    curl -X 'POST' 'notymail.yourdomain.your_tld/api/email' \
-      -H 'accept: application/json' \
-      -H 'Content-Type: application/json' \
-      -d '{
-        "to": "test@1.1.1.1.at",
-        "subject": "Hello world!",
-        "body": "Hello body world! **This is markdown**"
-      }'
-    ```
+  <Card title="Use with your favorite tool" icon="pencil">
+    <div class="home-links">
+      - [<strong>curl</strong>](/usage/curl) - [<strong>fetch</strong>
+      ](/usage/fetch) - [<strong>Swagger Docs</strong>
+      ](https://private.notymail.dafnik.me/docs)
+    </div>
   </Card>
   <Card title="Read the docs" icon="open-book">
     Learn more in [the notymail Docs](/getting-started/installation/).
