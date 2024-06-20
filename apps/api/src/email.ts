@@ -1,7 +1,5 @@
 import { createRoute, OpenAPIHono, z } from '@hono/zod-openapi';
 import { Marked } from 'marked';
-import markedPlaintify from 'marked-plaintify';
-import { undefined } from 'zod';
 import { isAPIKeyInvalid } from './utils/api-keys';
 
 import sendMail from './utils/mail';
@@ -11,11 +9,6 @@ const htmlRenderer = new Marked({
   breaks: true,
   async: true,
 });
-const plainTextRendered = new Marked({
-  gfm: true,
-  breaks: true,
-  async: true,
-}).use(markedPlaintify());
 
 const EmailDtoSchema = z
   .object({
@@ -137,6 +130,34 @@ export const emailRoute = createRoute({
   },
 });
 
+function removeMarkdown(text: string): string {
+  // Remove code blocks
+  text = text.replace(/```[\s\S]*?```/g, '');
+  // Remove inline code
+  text = text.replace(/`[^`\n]+`/g, '');
+  // Remove images
+  text = text.replace(/!\[.*?\]\(.*?\)/g, '');
+  // Remove links
+  text = text.replace(/\[.*?\]\(.*?\)/g, '');
+  // Remove bold and italics
+  text = text.replace(/(\*\*|__)(.*?)\1/g, '$2'); // Bold
+  text = text.replace(/(\*|_)(.*?)\1/g, '$2');    // Italics
+  // Remove strikethrough
+  text = text.replace(/~~(.*?)~~/g, '$1');
+  // Remove headers
+  text = text.replace(/^\s*(#{1,6})\s*(.*)/gm, '$2');
+  // Remove horizontal rules
+  text = text.replace(/^-{3,}/gm, '');
+  // Remove blockquotes
+  text = text.replace(/^\s*>+\s?/gm, '');
+  // Remove unordered lists
+  text = text.replace(/^\s*[-+*]\s+/gm, '');
+  // Remove ordered lists
+  text = text.replace(/^\s*\d+\.\s+/gm, '');
+
+  return text;
+}
+
 const emailApi = new OpenAPIHono();
 
 emailApi.openapi(
@@ -157,15 +178,8 @@ emailApi.openapi(
       );
     }
 
-    // noinspection ES6MissingAwait
-    const [html, text] = await Promise.all([
-      (body ? htmlRenderer.parse(body) : Promise.resolve(undefined)) as Promise<
-        string | undefined
-      >,
-      (body
-        ? plainTextRendered.parse(body)
-        : Promise.resolve(undefined)) as Promise<string | undefined>,
-    ]);
+    const html = body ? await htmlRenderer.parse(body) : undefined;
+    const text = body ? removeMarkdown(body) : undefined;
 
     try {
       const mail = await sendMail(to, subject, html, text);
