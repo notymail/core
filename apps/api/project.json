@@ -63,9 +63,6 @@
       "configurations": {
         "local": {
           "tags": ["notymail:latest"]
-        },
-        "production": {
-          "tags": ["ghcr.io/dafnik/notymail:latest"]
         }
       }
     }

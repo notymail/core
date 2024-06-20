@@ -18,11 +18,11 @@ export default defineConfig({
     starlight({
       title: 'notymail',
       editLink: {
-        baseUrl: 'https://github.com/dafnik/notymail/edit/main/apps/docs/',
+        baseUrl: 'https://github.com/notymail/core/edit/main/apps/docs/',
       },
       customCss: ['./src/styles/custom.css'],
       social: {
-        github: 'https://github.com/Dafnik/notymail',
+        github: 'https://github.com/notymail/core',
       },
       favicon: '/favicon.png',
       sidebar: [

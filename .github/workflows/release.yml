@@ -61,7 +61,7 @@ jobs:
             version=${{ env.TAG_NAME }}
           # tags: 3.4.0, latest
           tags: |
-            ghcr.io/dafnik/notymail:${{ env.TAG_NAME }}
-            ghcr.io/dafnik/notymail:latest
+            ghcr.io/notymail/core:${{ env.TAG_NAME }}
+            ghcr.io/notymail/core:latest
             dafnik/notymail:${{ env.TAG_NAME }}
             dafnik/notymail:latest

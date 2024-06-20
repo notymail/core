@@ -1,6 +1,6 @@
 # notymail
 
-<a target="_blank" href="https://github.com/dafnik/notymail"><img src="https://img.shields.io/github/stars/dafnik/notymail?style=flat" /></a>
+<a target="_blank" href="https://github.com/notymail/core"><img src="https://img.shields.io/github/stars/notymail/core?style=flat" /></a>
 <a target="_blank" href="https://hub.docker.com/r/dafnik/notymail"><img src="https://img.shields.io/docker/pulls/dafnik/notymail" /></a>
 <a target="_blank" href="https://hub.docker.com/r/dafnik/notymail"><img src="https://img.shields.io/docker/v/dafnik/notymail/latest?label=docker%20image%20ver." /></a>
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/dafnik?label=GitHub%20Sponsors)](https://github.com/sponsors/dafnik)
@@ -38,7 +38,7 @@ docker run -d -p 3124:3124 --restart=always --name notymail \
   -e MAIL_SECURE='false' \
   -e MAIL_AUTH_USER='test@1.1.1.1' \
   -e MAIL_AUTH_PASSWORD='password' \
-  ghcr.io/dafnik/notymail:latest
+  ghcr.io/notymail/core:latest
 ```
 
 > [!NOTE]
