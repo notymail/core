@@ -141,7 +141,7 @@ function removeMarkdown(text: string): string {
   text = text.replace(/\[.*?\]\(.*?\)/g, '');
   // Remove bold and italics
   text = text.replace(/(\*\*|__)(.*?)\1/g, '$2'); // Bold
-  text = text.replace(/(\*|_)(.*?)\1/g, '$2');    // Italics
+  text = text.replace(/(\*|_)(.*?)\1/g, '$2'); // Italics
   // Remove strikethrough
   text = text.replace(/~~(.*?)~~/g, '$1');
   // Remove headers
