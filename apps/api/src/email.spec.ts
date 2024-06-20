@@ -119,7 +119,7 @@ describe('Working email', () => {
       messageId: json.messageId,
       to: 'test@test.at',
       subject: 'Hello world',
-      text: 'Hello body world\n\n',
+      text: 'Hello body world',
       html: '<p>Hello body world</p>\n',
     });
 
@@ -156,7 +156,7 @@ describe('Working email', () => {
       messageId: json.messageId,
       to: 'test@test.at',
       subject: 'Hello world',
-      text: 'Hello body world\n\n',
+      text: 'Hello body world',
       html: '<p>Hello body world</p>\n',
     });
 
