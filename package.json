@@ -26,8 +26,6 @@
     "@astrojs/solid-js": "^4.4.0",
     "@astrojs/starlight": "^0.24.2",
     "@astrojs/tailwind": "^5.1.0",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
     "@nx-tools/nx-container": "^6.0.1",
     "@nx/esbuild": "19.3.0",
     "@nx/jest": "19.3.0",
