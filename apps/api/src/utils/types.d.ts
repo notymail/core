@@ -6,6 +6,7 @@ declare const process: {
     MAIL_SECURE: string;
     MAIL_AUTH_USER: string;
     MAIL_AUTH_PASSWORD: string;
+    MAIL_TIME_OUT_MS: string | undefined;
     API_KEYS: string;
   };
 };
