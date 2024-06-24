@@ -18,7 +18,6 @@ FROM base AS runner
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 hono
 
-COPY --from=builder --chown=hono:nodejs /app/node_modules /app/node_modules
 COPY --from=builder --chown=hono:nodejs /app/dist/apps/api /app/dist
 COPY --from=builder --chown=hono:nodejs /app/dist/apps/api/package.json /app/package.json
 
