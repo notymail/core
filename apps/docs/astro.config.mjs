@@ -37,6 +37,7 @@ export default defineConfig({
         {
           label: 'Usage',
           items: [
+            { label: 'GitHub Action', link: '/usage/action' },
             { label: 'curl', link: '/usage/curl' },
             { label: 'fetch', link: '/usage/fetch' },
             {
