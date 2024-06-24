@@ -17,10 +17,18 @@ export default function sendMail(
         user: process.env.MAIL_AUTH_USER,
         pass: process.env.MAIL_AUTH_PASSWORD,
       },
-      connectionTimeout: TEN_SECONDS_MS,
-      greetingTimeout: TEN_SECONDS_MS,
-      socketTimeout: TEN_SECONDS_MS,
-      dnsTimeout: TEN_SECONDS_MS,
+      connectionTimeout: process.env.MAIL_TIME_OUT_MS
+        ? Number(process.env.MAIL_TIME_OUT_MS)
+        : TEN_SECONDS_MS,
+      greetingTimeout: process.env.MAIL_TIME_OUT_MS
+        ? Number(process.env.MAIL_TIME_OUT_MS)
+        : TEN_SECONDS_MS,
+      socketTimeout: process.env.MAIL_TIME_OUT_MS
+        ? Number(process.env.MAIL_TIME_OUT_MS)
+        : TEN_SECONDS_MS,
+      dnsTimeout: process.env.MAIL_TIME_OUT_MS
+        ? Number(process.env.MAIL_TIME_OUT_MS)
+        : TEN_SECONDS_MS,
     })
     .sendMail({
       from: process.env.MAIL_SENDER,
