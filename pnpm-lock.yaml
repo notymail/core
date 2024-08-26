@@ -18,13 +18,13 @@ importers:
         version: 1.11.3
       '@hono/swagger-ui':
         specifier: 0.2.2
-        version: 0.2.2(hono@4.4.6)
+        version: 0.2.2(hono@4.5.8)
       '@hono/zod-openapi':
         specifier: 0.14.4
-        version: 0.14.4(hono@4.4.6)(zod@3.23.8)
+        version: 0.14.4(hono@4.5.8)(zod@3.23.8)
       hono:
-        specifier: 4.4.6
-        version: 4.4.6
+        specifier: 4.5.8
+        version: 4.5.8
       marked:
         specifier: 13.0.0
         version: 13.0.0
@@ -3243,8 +3243,8 @@ packages:
   hastscript@9.0.0:
     resolution: {integrity: sha512-jzaLBGavEDKHrc5EfFImKN7nZKKBdSLIdGvCwDZ9TfzbF2ffXiov8CKE445L2Z1Ek2t/m4SKQ2j6Ipv7NyUolw==}
 
-  hono@4.4.6:
-    resolution: {integrity: sha512-XGRnoH8WONv60+PPvP9Sn067A9r/8JdHDJ5bgon0DVEHeR1cJPkWjv2aT+DBfMH9/mEkYa1+VEVFp1DT1lIwjw==}
+  hono@4.5.8:
+    resolution: {integrity: sha512-pqpSlcdqGkpTTRpLYU1PnCz52gVr0zVR9H5GzMyJWuKQLLEBQxh96q45QizJ2PPX8NATtz2mu31/PKW/Jt+90Q==}
     engines: {node: '>=16.0.0'}
 
   hosted-git-info@7.0.2:
@@ -6624,20 +6624,20 @@ snapshots:
 
   '@hono/node-server@1.11.3': {}
 
-  '@hono/swagger-ui@0.2.2(hono@4.4.6)':
+  '@hono/swagger-ui@0.2.2(hono@4.5.8)':
     dependencies:
-      hono: 4.4.6
+      hono: 4.5.8
 
-  '@hono/zod-openapi@0.14.4(hono@4.4.6)(zod@3.23.8)':
+  '@hono/zod-openapi@0.14.4(hono@4.5.8)(zod@3.23.8)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 7.1.1(zod@3.23.8)
-      '@hono/zod-validator': 0.2.2(hono@4.4.6)(zod@3.23.8)
-      hono: 4.4.6
+      '@hono/zod-validator': 0.2.2(hono@4.5.8)(zod@3.23.8)
+      hono: 4.5.8
       zod: 3.23.8
 
-  '@hono/zod-validator@0.2.2(hono@4.4.6)(zod@3.23.8)':
+  '@hono/zod-validator@0.2.2(hono@4.5.8)(zod@3.23.8)':
     dependencies:
-      hono: 4.4.6
+      hono: 4.5.8
       zod: 3.23.8
 
   '@humanwhocodes/module-importer@1.0.1': {}
@@ -9304,7 +9304,7 @@ snapshots:
       property-information: 6.5.0
       space-separated-tokens: 2.0.2
 
-  hono@4.4.6: {}
+  hono@4.5.8: {}
 
   hosted-git-info@7.0.2:
     dependencies:
