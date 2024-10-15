@@ -26,8 +26,8 @@ importers:
         specifier: 4.5.8
         version: 4.5.8
       marked:
-        specifier: 13.0.0
-        version: 13.0.0
+        specifier: 14.1.2
+        version: 14.1.2
       nodemailer:
         specifier: 6.9.13
         version: 6.9.13
@@ -117,8 +117,8 @@ importers:
         specifier: ^0.14.0
         version: 0.14.1
       prettier-plugin-organize-imports:
-        specifier: ^3.2.4
-        version: 3.2.4(prettier@3.3.2)(typescript@5.5.4)
+        specifier: ^4.0.0
+        version: 4.1.0(prettier@3.3.2)(typescript@5.5.4)
       sharp:
         specifier: ^0.33.4
         version: 0.33.5
@@ -3793,8 +3793,8 @@ packages:
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
-  marked@13.0.0:
-    resolution: {integrity: sha512-VTeDCd9txf4KLLljUZ0nljE/Incb9SrWuueE44QVuU0pkOdh4sfCeW1Z6lPcxyDRSVY6rm8db/0OPaN75RNUmw==}
+  marked@14.1.2:
+    resolution: {integrity: sha512-f3r0yqpz31VXiDB/wj9GaOB0a2PRLQl6vJmXiFrniNwjkKdvakqJRULhjFKJpxOchlCRiG5fcacoUZY5Xa6PEQ==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -4337,17 +4337,14 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier-plugin-organize-imports@3.2.4:
-    resolution: {integrity: sha512-6m8WBhIp0dfwu0SkgfOxJqh+HpdyfqSSLfKKRZSFbDuEQXDDndb8fTpRWkUrX/uBenkex3MgnVk0J3b3Y5byog==}
+  prettier-plugin-organize-imports@4.1.0:
+    resolution: {integrity: sha512-5aWRdCgv645xaa58X8lOxzZoiHAldAPChljr/MT0crXVOWTZ+Svl4hIWlz+niYSlO6ikE5UXkN1JrRvIP2ut0A==}
     peerDependencies:
-      '@volar/vue-language-plugin-pug': ^1.0.4
-      '@volar/vue-typescript': ^1.0.4
       prettier: '>=2.0'
       typescript: '>=2.9'
+      vue-tsc: ^2.1.0
     peerDependenciesMeta:
-      '@volar/vue-language-plugin-pug':
-        optional: true
-      '@volar/vue-typescript':
+      vue-tsc:
         optional: true
 
   prettier@2.8.7:
@@ -10047,7 +10044,7 @@ snapshots:
 
   markdown-table@3.0.3: {}
 
-  marked@13.0.0: {}
+  marked@14.1.2: {}
 
   mdast-util-definitions@6.0.0:
     dependencies:
@@ -10918,7 +10915,7 @@ snapshots:
       prettier: 3.3.2
       sass-formatter: 0.7.9
 
-  prettier-plugin-organize-imports@3.2.4(prettier@3.3.2)(typescript@5.5.4):
+  prettier-plugin-organize-imports@4.1.0(prettier@3.3.2)(typescript@5.5.4):
     dependencies:
       prettier: 3.3.2
       typescript: 5.5.4
