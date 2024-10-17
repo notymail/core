@@ -11,9 +11,9 @@
   },
   "packageManager": "pnpm@9.3.0",
   "dependencies": {
-    "@hono/node-server": "1.11.3",
-    "@hono/swagger-ui": "0.2.2",
-    "@hono/zod-openapi": "0.14.4",
+    "@hono/node-server": "1.13.2",
+    "@hono/swagger-ui": "0.4.1",
+    "@hono/zod-openapi": "0.16.4",
     "hono": "4.6.5",
     "marked": "14.1.2",
     "nodemailer": "6.9.13",
