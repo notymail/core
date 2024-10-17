@@ -55,10 +55,5 @@
     "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "typescript": "5.6.3"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@nxtensions/astro@19.0.0": "patches/@nxtensions__astro@19.0.0.patch"
-    }
   }
 }
