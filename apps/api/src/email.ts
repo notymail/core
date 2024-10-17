@@ -209,7 +209,6 @@ emailApi.openapi(
   },
   (result, c) => {
     if (!result.success) {
-      // @ts-expect-error Weird type error -> it works
       return c.json(
         {
           code: 400,
