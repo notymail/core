@@ -41,5 +41,6 @@
     },
     "@nxtensions/astro"
   ],
-  "defaultProject": "docs"
+  "defaultProject": "docs",
+  "useLegacyCache": true
 }
